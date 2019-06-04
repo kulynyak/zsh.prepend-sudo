@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# add sudo before command with alt+s, esc+esc
+# add sudo before command with ctrl+s, esc+esc
 function prepend-sudo() {
   [[ -z $BUFFER ]] && zle up-history
   if [[ $BUFFER == sudo\ * ]]; then
@@ -13,5 +13,5 @@ function prepend-sudo() {
 zle -N prepend-sudo
 # defined shortcut keys: [Esc] [Esc]
 bindkey "\e\e" prepend-sudo
-# defined shortcut keys: [Alt-s]
+# defined shortcut keys: [Ctrl-s]
 bindkey "^[s" prepend-sudo
